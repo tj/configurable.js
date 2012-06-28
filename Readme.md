@@ -1,7 +1,35 @@
 
 # configurable
 
-  Configuration mixin
+  Configuration mixin.
+
+## API
+
+ Make something configurable:
+
+```js
+var Configurable = require('configurable');
+
+// plain obj
+var obj = {};
+Configurable(obj);
+
+// returns the obj itself
+var obj = Configurable({});
+
+// make a prototype configurable
+Configurable(MyThing.prototype);
+```
+
+```js
+.get(name)
+.set(name, val)
+.set(obj)
+.enable(name)
+.disable(name)
+.enabled(name)
+.disabled(name)
+```
 
 ## License 
 
