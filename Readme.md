@@ -21,6 +21,8 @@ var obj = Configurable({});
 Configurable(MyThing.prototype);
 ```
 
+The object will then have the following methods available:
+
 ```js
 .get(name)
 .set(name, val)
