@@ -8,6 +8,18 @@ describe('obj.', function(){
     obj = Configurable({});
   })
 
+  describe('.set(obj)', function(){
+    it('should set multiple values', function(){
+      obj.set({
+        foo: 'bar',
+        bar: 'baz'
+      })
+
+      obj.get('foo').should.equal('bar');
+      obj.get('bar').should.equal('baz');
+    })
+  })
+
   describe('.set(name, val)', function(){
     it('should set .settings[name] to val', function(){
       obj.set('foo', 'bar');
