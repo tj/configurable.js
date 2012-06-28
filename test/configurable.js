@@ -10,6 +10,10 @@ describe('.set(name, val)', function(){
     obj.set('foo', 'bar');
     obj.settings.foo.should.equal('bar');
   })
+
+  it('should return itself', function(){
+    obj.set('foo', 'bar').should.equal(obj);
+  })
 })
 
 describe('.get(name)', function(){
