@@ -22,3 +22,25 @@ describe('.get(name)', function(){
     obj.get('foo').should.equal('bar');
   })
 })
+
+describe('.enable(name)', function(){
+  it('should set .settings[name] to true', function(){
+    obj.enable('proxy');
+    obj.get('proxy').should.equal(true);
+  })
+
+  it('should return itself', function(){
+    obj.enable('proxy').should.equal(obj);
+  })
+})
+
+describe('.disable(name)', function(){
+  it('should set .settings[name] to false', function(){
+    obj.disable('proxy');
+    obj.get('proxy').should.equal(false);
+  })
+
+  it('should return itself', function(){
+    obj.disable('proxy').should.equal(obj);
+  })
+})
