@@ -1,0 +1,12 @@
+{
+  "name": "configurable.js",
+  "repo": "visionmedia/configurable.js",
+  "description": "Configurable mixin",
+  "version": "0.0.1",
+  "keywords": ["config", "configuration", "mixin", "set", "get", "enable", "disable"],
+  "dependencies": {},
+  "development": {},
+  "scripts": [
+    "index.js"
+  ]
+}
