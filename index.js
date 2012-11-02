@@ -40,13 +40,30 @@ module.exports = function(obj){
   /**
    * Get setting `name`.
    *
+   * if the setting is not defined
+   * the `def` default argument will
+   * be returned.
+   *
+   * example:
+   *
+   *        get('foo', []);
+   *        // > []
+   *        set('bar', 'foo').get('bar');
+   *        // > foo
+   *        get('bar', {});
+   *        // > foo
+   *
    * @param {String} name
+   * @param {mixed} def
    * @return {Mixed}
    * @api public
    */
 
-  obj.get = function(name){
-    return this.settings[name];
+  obj.get = function(name, def){
+    var v = this.settings[name];
+    return 'undefined' == typeof v
+      ? def
+      : v;
   };
 
   /**

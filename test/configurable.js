@@ -38,6 +38,14 @@ describe('obj.', function(){
     })
   })
 
+  describe('.get(name, default)', function () {
+    it('should return `default` argument if the setting is `undefined`', function () {
+      obj.set('foo', 'bar').get('foo').should.equal('bar');
+      obj.get('foo', []).should.equal('bar');
+      obj.get('bar', Object).should.equal(Object);
+    })
+  })
+
   describe('.enable(name)', function(){
     it('should set .settings[name] to true', function(){
       obj.enable('proxy');
