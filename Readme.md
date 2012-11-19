@@ -1,4 +1,3 @@
-
 # configurable
 
   Configuration mixin.
@@ -33,7 +32,7 @@ The object will then have the following methods available:
 .disabled(name)
 ```
 
-__NOTE__: when assigning to a `.prototype` make sure to re-defined `.settings = {}`
+__NOTE__: when assigning to a `.prototype` make sure to re-define `.settings = {}`
 in the constructor so objects do not share these values.
 
 ## License 
