@@ -97,5 +97,31 @@ module.exports = function(obj){
     return ! this.get(name);
   };
 
+  /**
+   * Increment `name`
+   * and return new value.
+   *
+   * @param {String} name
+   * @return {Number} value
+   * @api public
+   */
+
+  obj.inc = function(name){
+    return ++this.settings[name];
+  };
+
+  /**
+   * Decrement `name`
+   * and return new value.
+   *
+   * @param {String} name
+   * @return {Number} value
+   * @api public
+   */
+
+  obj.dec = function(name){
+    return --this.settings[name];
+  };
+
   return obj;
 };
