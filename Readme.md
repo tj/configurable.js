@@ -30,6 +30,8 @@ The object will then have the following methods available:
 .disable(name)
 .enabled(name)
 .disabled(name)
+.inc(name)
+.dec(name)
 ```
 
 __NOTE__: when assigning to a `.prototype` make sure to re-define `.settings = {}`

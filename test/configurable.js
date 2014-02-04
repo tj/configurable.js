@@ -75,4 +75,31 @@ describe('obj.', function(){
       obj.disabled('proxy').should.be.false;
     })
   })
+
+  describe('.inc(name)', function(){
+
+    it('should return 1', function(){
+      obj.set('num', 0);
+      obj.inc('num').should.equal(1);
+    })
+
+    it('should be 1', function(){
+      obj.set('num', 0);
+      obj.inc('num');
+      obj.get('num').should.equal(1);
+    })
+  })
+
+  describe('.dec(name)', function(){
+    it('should return -1', function(){
+      obj.set('num', 0);
+      obj.dec('num').should.equal(-1);
+    })
+
+    it('should be -1', function(){
+      obj.set('num', 0)
+      obj.dec('num')
+      obj.get('num').should.equal(-1);
+    })
+  })
 })
